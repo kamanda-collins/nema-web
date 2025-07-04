@@ -391,13 +391,28 @@
             <a href="#app" class="action-btn secondary">
                 📋 Start Assessment
             </a>
-            <a href="#faq" class="action-btn secondary">
-                📄 FAQ
-            </a>
         </div>
     </div>
 
-    <!-- FAQ Section -->
+    
+    <!-- Main App Container -->
+    <section class="app-container" id="app">
+        <div class="container">
+            <iframe 
+                id="nema-app"
+                class="app-embed loading"
+                src="https://nema-kamandalabs.streamlit.app?embed=true"
+                title="NEMA Compliance Checker Application"
+                allowfullscreen>
+                <p>Your browser does not support iframes. Please <a href="https://nema-kamandalabs.streamlit.app" target="_blank">click here to access the application directly</a>.</p>
+            </iframe>
+            
+            <!-- FAQ Action Button -->
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="#faq" class="action-btn secondary">
+                    📄 Have Questions? Check our FAQ
+                </a>
+                <!-- FAQ Section -->
     <section class="faq-section" id="faq">
         <div class="container">
             <h2 style="text-align: center; color: #2d3748; margin-bottom: 2rem;">📄 FAQ – Professional Compliance Assessment Tool (Uganda)</h2>
@@ -427,7 +442,6 @@
                         </ul>
                     </div>
                 </div>
-
                 <div class="faq-item">
                     <div class="faq-question" onclick="toggleFaq(this)">
                         <h3>❓ What format is the output?</h3>
@@ -492,7 +506,7 @@
                         <p>You can provide feedback through the feedback form in the app above, or contact us directly.</p>
                         <div class="contact-buttons">
                             <a href="mailto:kamandacollins00@gmail.com" class="contact-btn">📧 Email</a>
-                            <a href="https://linkedin.com/in/kamanda-collins" class="contact-btn" target="_blank">💼 LinkedIn</a>
+                            <a href="https://linkedin.com/kamanda-collins" class="contact-btn" target="_blank">💼 LinkedIn</a>
                         </div>
                     </div>
                 </div>
@@ -509,18 +523,7 @@
             </div>
         </div>
     </section>
-
-    <!-- Main App Container -->
-    <section class="app-container" id="app">
-        <div class="container">
-            <iframe 
-                id="nema-app"
-                class="app-embed loading"
-                src="https://nema-kamandalabs.streamlit.app?embed=true"
-                title="NEMA Compliance Checker Application"
-                allowfullscreen>
-                <p>Your browser does not support iframes. Please <a href="https://nema-kamandalabs.streamlit.app" target="_blank">click here to access the application directly</a>.</p>
-            </iframe>
+            </div>
         </div>
     </section>
 
