@@ -18,7 +18,7 @@
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://nema.kamandalabs.me/">
     <meta property="twitter:title" content="NEMA Compliance Checker">
-    <meta property="twitter:description" content="Professional wetland compliance assessment tool for environmental impact analysis">
+    <meta property="twitter:description" content="Check wetland proximity in seconds-get a NEMA template and site map instantly">
     <meta property="twitter:image" content="https://nema.kamandalabs.me/og-image.png">
 
     <!-- Favicon -->
@@ -180,6 +180,118 @@
             color: white;
         }
 
+        /* FAQ Section */
+        .faq-section {
+            padding: 3rem 0;
+            background: #f8fafc;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .faq-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: linear-gradient(135deg, #5a6fd8 0%, #6a5acd 100%);
+        }
+
+        .faq-question h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .faq-toggle {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            font-weight: bold;
+        }
+
+        .faq-toggle.active {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-answer.active {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            margin-bottom: 0.5rem;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .faq-answer ul {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .faq-answer li {
+            color: #4a5568;
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            padding: 0.5rem 1rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .contact-btn:hover {
+            background: #5a6fd8;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
         /* Footer */
         .footer {
             background: #2d3748;
@@ -279,8 +391,124 @@
             <a href="#app" class="action-btn secondary">
                 📋 Start Assessment
             </a>
+            <a href="#faq" class="action-btn secondary">
+                📄 FAQ
+            </a>
         </div>
     </div>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 style="text-align: center; color: #2d3748; margin-bottom: 2rem;">📄 FAQ – Professional Compliance Assessment Tool (Uganda)</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>❓ What does this tool do?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>It checks if a set of coordinates falls within or near a wetland in Uganda, based on publicly available geospatial data. It then generates a professional-style output report in Word, Markdown, and PNG format to support Environmental Impact Assessment (EIA) processes.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>❓ Who is this tool for?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <ul>
+                            <li>Environmental consultants</li>
+                            <li>EIA practitioners</li>
+                            <li>Developers or planners working near sensitive areas</li>
+                            <li>Researchers & students in environmental science, GIS, or planning</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>❓ What format is the output?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You receive:</p>
+                        <ul>
+                            <li>A Word Document (.docx) with a structured report template</li>
+                            <li>A Markdown file (for devs/researchers who use versioning tools)</li>
+                            <li>A PNG map image showing the queried area and proximity to wetlands</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>❓ Do I need GIS or coding skills?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No. You just input coordinates or location data. The system processes everything for you.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>❓ How accurate is the wetland data?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The tool uses a simplified, open-source wetland dataset. It is suitable for preliminary screening, not a substitute for an official ground-truthed report.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>❓ Can this be used outside Uganda?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The current version is specific to Uganda. We're exploring expansion depending on demand and available data.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>❓ Is it NEMA certified?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No. This is not an official NEMA tool. It is designed to help professionals and students prepare and pre-screen data before submitting formal documentation. It follows NEMA-style report formats.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>❓ How can I give feedback?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can provide feedback through the feedback form in the app above, or contact us directly.</p>
+                        <div class="contact-buttons">
+                            <a href="mailto:kamandacollins00@gmail.com" class="contact-btn">📧 Email</a>
+                            <a href="https://linkedin.com/in/kamanda-collins" class="contact-btn" target="_blank">💼 LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h3>❓ Is it free?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Currently free during early access. Pricing may be introduced based on feedback and use.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Main App Container -->
     <section class="app-container" id="app">
@@ -301,9 +529,9 @@
         <div class="container">
             <p>&copy; 2025 KamandaLabs. Built for environmental conservation and regulatory compliance.</p>
             <p>
-                <a href="https://kamandalabs.com" target="_blank">KamandaLabs</a> | 
-                <a href="mailto:contact@kamandalabs.com">Contact</a> | 
-                <a href="https://github.com/kamandalabs" target="_blank">GitHub</a>
+                <a href="https://kamandalabs.me" target="_blank">KamandaLabs</a> | 
+                <a href="kamandacollins00@gmail.com">Contact</a> | 
+                <a href="https://github.com/kamanda-collins" target="_blank">GitHub</a>
             </p>
         </div>
     </footer>
@@ -339,6 +567,27 @@
         // Vercel Analytics
         if (typeof va !== 'undefined') {
             va.track();
+        }
+
+        // FAQ Toggle functionality
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const toggle = element.querySelector('.faq-toggle');
+            
+            // Close all other FAQs
+            const allAnswers = document.querySelectorAll('.faq-answer');
+            const allToggles = document.querySelectorAll('.faq-toggle');
+            
+            allAnswers.forEach((ans, index) => {
+                if (ans !== answer) {
+                    ans.classList.remove('active');
+                    allToggles[index].classList.remove('active');
+                }
+            });
+            
+            // Toggle current FAQ
+            answer.classList.toggle('active');
+            toggle.classList.toggle('active');
         }
         
         // Error handling for iframe
