@@ -292,6 +292,91 @@
             box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
         }
 
+        /* Premium Section */
+        .premium-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 0;
+            margin: 2rem 0;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .premium-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .premium-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .premium-feature {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .premium-feature h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .premium-feature p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .payment-options {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .payment-btn {
+            padding: 1rem 2rem;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .payment-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            background: #f8f9fa;
+        }
+
+        .payment-btn.momo {
+            background: #FFD700;
+            color: #333;
+        }
+
+        .payment-btn.gumroad {
+            background: #FF6B6B;
+            color: white;
+        }
+
+        .waitlist-info {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            backdrop-filter: blur(10px);
+        }
+
         /* Footer */
         .footer {
             background: #2d3748;
@@ -417,7 +502,68 @@
                 <a href="#faq" class="action-btn secondary">
                     📄 Have Questions? Check our FAQ
                 </a>
-                <!-- FAQ Section -->
+            </div>
+
+            <!-- Premium Version Section -->
+            <div class="premium-section">
+                <div class="premium-content">
+                    <h2>🚀 Join the Waitlist for Premium Features</h2>
+                    <p style="font-size: 1.1rem; margin: 1rem 0;">Get early access to advanced features and support the development!</p>
+                    
+                    <div class="premium-features">
+                        <div class="premium-feature">
+                            <h4>📡 Real-time Monitoring</h4>
+                            <p>Live updates on wetland changes and compliance status</p>
+                        </div>
+                        <div class="premium-feature">
+                            <h4>📈 Advanced Analytics</h4>
+                            <p>Detailed environmental impact assessments and trends</p>
+                        </div>
+                        <div class="premium-feature">
+                            <h4>🎯 Priority Support</h4>
+                            <p>Direct access to our team for custom requirements</p>
+                        </div>
+                        <div class="premium-feature">
+                            <h4>🌍 Global Expansion</h4>
+                            <p>Coming soon: Kenya, Tanzania, Rwanda and more regions</p>
+                        </div>
+                        <div class="premium-feature">
+                            <h4>🔄 API Access</h4>
+                            <p>Integrate NEMA compliance into your existing workflows</p>
+                        </div>
+                        <div class="premium-feature">
+                            <h4>💰 Professional Value</h4>
+                            <p>Save thousands vs Esri/Mapbox enterprise solutions</p>
+                        </div>
+                    </div>
+
+                    <div class="waitlist-info">
+                        <h3>💰 Early Bird Pricing: $50/month</h3>
+                        <p>Pay now to secure your spot and get 3 months free when we launch!</p>
+                        <p><strong>Professional pricing:</strong> Compare to Esri ArcGIS ($1,500+/year) or Mapbox Enterprise ($5,000+/year)</p>
+                        <p><small>Full refund available if you're not satisfied when premium launches</small></p>
+                    </div>
+
+                    <div class="payment-options">
+                        <a href="https://kamandacollins.gumroad.com/l/tkmcru?_gl=1*l4gc00*_ga*MTI1MTk4OTM4OC4xNzQ5NzkzNjg5*_ga_6LJN6D94N6*czE3NTE4MzI4MTAkbzEwJGcxJHQxNzUxODMyOTQ4JGozJGwwJGgw" class="payment-btn gumroad" target="_blank">
+                            💳 Pay via Gumroad
+                        </a>
+                        <a href="tel:+256771594776" class="payment-btn momo">
+                            📱 Mobile Money (UGX 190,000)
+                        </a>
+                    </div>
+
+                    <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                        <p><strong>Mobile Money Details (Uganda Only):</strong></p>
+                        <p>📞 Number: <strong>0771594776</strong></p>
+                        <p>🆔 Merchant ID: <strong>608817</strong></p>
+                        <p><small>Send payment and email us at kamandacollins00@gmail.com with your transaction details</small></p>
+                        <p><small>🌍 <strong>Global expansion in progress!</strong> International payment options coming soon.</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="faq-section" id="faq">
         <div class="container">
             <h2 style="text-align: center; color: #2d3748; margin-bottom: 2rem;">📄 FAQ – Professional Compliance Assessment Tool (Uganda)</h2>
