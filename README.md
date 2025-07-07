@@ -63,8 +63,8 @@ nema-web/
 
 ## 🎯 What This Does
 
-- Creates a professional landing page at `nema.kamandalabs.me`
-- Embeds your Streamlit app (`nema-kamandalabs.streamlit.app`)
+- Created a professional landing page at `nema.kamandalabs.me`
+- Embeds the built Streamlit app (`nema-kamandalabs.streamlit.app`)
 - Provides SEO optimization and mobile responsiveness
 - Handles loading states and error fallbacks
 
@@ -78,7 +78,6 @@ python -m http.server 3000 --directory public
 
 ## ✅ Final Result
 
-Your visitors will see:
 - `https://nema.kamandalabs.me` → Professional landing page with embedded app
 - Direct app access via buttons that link to your Streamlit app
 
